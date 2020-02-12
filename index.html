@@ -42,7 +42,7 @@
 			function recalculate() {
 				var dataSize = (+inpNum.value) * (+inpSize.value);
 				if (doesMyDataFitInRam(dataSize)) {
-					answer.innerHTML = '<object data="table.html"></object>';
+					answer.innerHTML = '<link rel="import" href="https://yourdatafitsinram.net/table.html">';
 					body.classList.add('answer-yes');
 					body.classList.remove('answer-no');
 				} else {
@@ -69,10 +69,16 @@
 		}
 
 		#answer {
-			font-size: 60px;
+			text-align: center;
 		}
 
-		#inputs,
+		object {}
+
+		#inputs {
+			height: fit-content;
+			margin-bottom: 20px;
+		}
+
 		#inpNum,
 		#inpSize {
 			font-size: 40px;
@@ -88,13 +94,14 @@
 </head>
 
 <body class="answer-maybe">
-	<h1 id="answer">Maybe</h1>
+
 	<div id="inputs">
-		My data is:<br>
+		<h1>My data is:</h1><br>
 		<input type="number" id="inpNum" value="5">
 		<select id="inpSize">
 		</select>
 	</div>
+	<div id="answer">Maybe</div>
 	<script>
 		start();
 	</script>
