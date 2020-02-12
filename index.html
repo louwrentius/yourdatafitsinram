@@ -14,8 +14,8 @@
 			['PiB', 1024 * 1024 * 1024 * 1024 * 1024],
 		];
 		var DefaultSize = Sizes[3];
-		var TB = Sizes[4][1];
-		var MAX_SENSIBLE = 12 * TB;
+		var GB = Sizes[3][1];
+		var MAX_SENSIBLE = 24576 * GB;
 
 		function doesMyDataFitInRam(dataSize) {
 			return dataSize <= MAX_SENSIBLE;
