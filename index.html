@@ -42,7 +42,7 @@
 			function recalculate() {
 				var dataSize = (+inpNum.value) * (+inpSize.value);
 				if (doesMyDataFitInRam(dataSize)) {
-					answer.innerHTML = "test";
+					answer.innerHTML = '<object data="table.html"></object>';
 					body.classList.add('answer-yes');
 					body.classList.remove('answer-no');
 				} else {
