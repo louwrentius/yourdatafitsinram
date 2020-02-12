@@ -3,6 +3,7 @@
 
 <head>
 	<title>Does your data fit in RAM?</title>
+
 	<script>
 		var Sizes = [
 			['bytes', 1],
@@ -14,7 +15,6 @@
 		];
 		var DefaultSize = Sizes[3];
 		var TB = Sizes[4][1];
-
 		var MAX_SENSIBLE = 20 * TB;
 
 		function doesMyDataFitInRam(dataSize) {
@@ -30,7 +30,6 @@
 			for (var i = 0; i < Sizes.length; i++) {
 				var size = Sizes[i];
 				var isSelected = (size == DefaultSize);
-
 				var selectOpt = document.createElement('option');
 				selectOpt.selected = isSelected;
 				selectOpt.value = size[1];
@@ -42,7 +41,8 @@
 			function recalculate() {
 				var dataSize = (+inpNum.value) * (+inpSize.value);
 				if (doesMyDataFitInRam(dataSize)) {
-					answer.innerHTML = '<link rel="import" href="https://yourdatafitsinram.net/table.html">';
+					var content = document.getElementById('mytest').import;
+					answer.innerHTML = content;
 					body.classList.add('answer-yes');
 					body.classList.remove('answer-no');
 				} else {
@@ -94,6 +94,8 @@
 </head>
 
 <body class="answer-maybe">
+
+	<link id="mytest" rel="import" href="table.html">
 
 	<div id="inputs">
 		<h1>My data is:</h1><br>
