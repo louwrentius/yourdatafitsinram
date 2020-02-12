@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<link id="mytest" rel="import" href="table.html" />
 
 <head>
 	<title>Does your data fit in RAM?</title>
@@ -42,8 +41,7 @@
 			function recalculate() {
 				var dataSize = (+inpNum.value) * (+inpSize.value);
 				if (doesMyDataFitInRam(dataSize)) {
-					var content = document.getElementsByTagName("link")[0].import;
-					answer.innerHTML = content;
+					answer.innerHTML = 'test';
 					body.classList.add('answer-yes');
 					body.classList.remove('answer-no');
 				} else {
