@@ -15,7 +15,7 @@
 		var DefaultSize = Sizes[3];
 		var TB = Sizes[4][1];
 
-		var MAX_SENSIBLE = 6 * TB;
+		var MAX_SENSIBLE = 20 * TB;
 
 		function doesMyDataFitInRam(dataSize) {
 			return dataSize <= MAX_SENSIBLE;
@@ -47,7 +47,7 @@
 					body.classList.add('answer-yes');
 					body.classList.remove('answer-no');
 				} else {
-					answer.innerHTML = "No, it probably doesn't fit in RAM (but it might).";
+					answer.innerHTML = "No, it probably doesn't fit in RAM.";
 					body.classList.remove('answer-yes');
 					body.classList.add('answer-no');
 				}
@@ -70,7 +70,7 @@
 		}
 
 		#answer {
-			font-size: 120px;
+			font-size: 60px;
 		}
 
 		#inputs,
