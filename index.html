@@ -43,7 +43,7 @@
 				var dataSize = (+inpNum.value) * (+inpSize.value);
 				if (doesMyDataFitInRam(dataSize)) {
 					var content = document.getElementsByTagName("link")[0].import;
-					answer.innerHTML = content.import;
+					answer.innerHTML = content;
 					body.classList.add('answer-yes');
 					body.classList.remove('answer-no');
 				} else {
