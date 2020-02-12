@@ -41,7 +41,7 @@
 			function recalculate() {
 				var dataSize = (+inpNum.value) * (+inpSize.value);
 				if (doesMyDataFitInRam(dataSize)) {
-					answer.innerHTML = '<object type="text/html" href="table.html"></object>';
+					answer.innerHTML = '<object data="table.html"></object>';
 					body.classList.add('answer-yes');
 					body.classList.remove('answer-no');
 				} else {
@@ -71,7 +71,10 @@
 			text-align: center;
 		}
 
-		object {}
+		object {
+			width: 50%;
+			height: 300px;
+		}
 
 		#inputs {
 			height: fit-content;
