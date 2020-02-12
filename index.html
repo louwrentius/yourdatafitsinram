@@ -69,6 +69,7 @@
 
 		#answer {
 			text-align: center;
+			color: maroon;
 		}
 
 		object {
@@ -82,7 +83,11 @@
 			margin-bottom: 20px;
 		}
 
-		#inpNum,
+		#inpNum {
+			width: 150px;
+			font-size: 2em;
+		}
+
 		#inpSize {
 			font-size: 40px;
 		}
@@ -97,6 +102,9 @@
 </head>
 
 <body class="answer-maybe">
+	<div id="head">
+		<h1>DOES MY DATA FIT IN RAM?</h1>
+	</div>
 	<div id="inputs">
 		<h1>My data is:</h1><br>
 		<input type="number" id="inpNum" value="5">
