@@ -12,6 +12,11 @@
         text-align: center;
         color: limegreen;
     }
+
+    h2 {
+        text-align: center;
+    }
+
 </style>
 <h1> Yes, your data fits in RAM!</h1>
 <table border="0" cellpadding="5" cellspacing="1">
@@ -56,17 +61,42 @@
         <td>12 TB</td>
     </tr>
     <tr>
-        <td>Amazon</td>
+        <td>Amazon AWS</td>
         <td>Virtual instance</td>
         <td><a target="_blank" rel="noopener noreferrer" href="https://aws.amazon.com/ec2/instance-types/x1e/">x1e.32xlarge</a>
         </td>
         <td>4 TB</td>
     </tr>
     <tr>
-        <td>Azure</td>
+        <td>Microsoft Azure</td>
         <td>Virtual instance</td>
         <td><a target="_blank" rel="noopener noreferrer" href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes-memory">Standard_M416ms_v2</a>
         </td>
         <td>12 TB</td>
+    </tr>
+</table>
+
+<h2>Some very large special cloud instances</h2>
+<table border="0" cellpadding="5" cellspacing="1">
+    <tr>
+        <th>Vendor</td>
+        <th>Type</th>
+        <th>Model</th>
+        <th>Max RAM</th>
+        <th>Remark</th>
+    </tr>
+    <tr>
+        <td>Microsoft Azure</td>
+        <td>Physical server</td>
+        <td><a target="_blank" rel="noopener noreferrer" href="https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/hana-available-skus">S960m</a></td>
+        <td>20 TB</td>
+        <td>Purpose build, focus on SAP, bare metal</td>
+    </tr>
+    <tr>
+        <td>Amazon AWS</td>
+        <td>Physical server</td>
+        <td><a target="_blank" rel="noopener noreferrer" href="https://aws.amazon.com/ec2/instance-types/high-memory/">u-24tb1.metal</a></td>
+        <td>24 TB</td>
+        <td>Purpose build, focus on SAP, bare metal</td>
     </tr>
 </table>
