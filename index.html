@@ -45,7 +45,7 @@
 					body.classList.add('answer-yes');
 					body.classList.remove('answer-no');
 				} else {
-					answer.innerHTML = "No, it probably doesn't fit in RAM.";
+					answer.innerHTML = "<h1>No, it probably doesn't fit in RAM.</h1>";
 					body.classList.remove('answer-yes');
 					body.classList.add('answer-no');
 				}
@@ -103,7 +103,7 @@
 		<select id="inpSize">
 		</select>
 	</div>
-	<div id="answer">Maybe</div>
+	<div id="answer">Maybe!</div>
 	<script>
 		start();
 	</script>
