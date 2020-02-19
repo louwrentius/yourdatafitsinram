@@ -51,7 +51,7 @@
 				}
 			}
 
-			recalculate();
+			setTimeout(function() { recalculate() } ,10000);
 			inpNum.addEventListener('change', recalculate);
 			inpSize.addEventListener('change', recalculate);
 			inpNum.addEventListener('keyup', recalculate);
@@ -111,7 +111,7 @@
 		<select id="inpSize">
 		</select>
 	</div>
-	<div id="answer">Maybe!</div>
+	<div id="answer"><h1>Maybe! Enter the size of your data set.</h1></div>
 	<script>
 		start();
 	</script>
